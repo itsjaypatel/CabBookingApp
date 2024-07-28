@@ -2,16 +2,17 @@ package com.itsjaypatel.cabbookingapp.entities;
 
 import com.itsjaypatel.cabbookingapp.entities.enums.Role;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Set;
 
 
 @Entity
 @Table(name = "app_user")
-@Getter
-@Setter
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class User {
 
     @Id

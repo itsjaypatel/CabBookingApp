@@ -2,8 +2,7 @@ package com.itsjaypatel.cabbookingapp.entities;
 
 import com.itsjaypatel.cabbookingapp.entities.enums.RideRequestStatus;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.locationtech.jts.geom.Point;
 
@@ -14,6 +13,9 @@ import java.time.LocalDateTime;
 @Table(name = "ride_request")
 @Getter
 @Setter
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class RideRequest {
 
     @Id
@@ -38,4 +40,6 @@ public class RideRequest {
 
     @Enumerated(EnumType.STRING)
     private PaymentMethod paymentMethod;
+
+    private Double fare;
 }
